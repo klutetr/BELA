@@ -81,5 +81,29 @@ Then they can be extracted using
 tar -xzvf tac_kbp_ent_disc_link_comp_train_eval_2014-2015_LDC2019T02.zip
 ```
 
+## Troubleshooting Instalation
+If you encounter issues during installation, try the following:
+•	Dependency issues: Ensure you’re using the correct Python version (3.8+) and compatible PyTorch version. Try updating dependencies with pip install --upgrade -r requirements.txt.
+•	GPU issues: Make sure CUDA is installed and correctly set up for your machine. Use nvidia-smi to check GPU status.
+
+## Expanded Usage Examples
+Example 1: Training for Entity Linking (English)
+PYTHONPATH=.:$PYTHONPATH python bela/main.py --config-name joint_el
+
+Example 2: Training for Multilingual Disambiguation
+PYTHONPATH=.:$PYTHONPATH python bela/main.py --config-name joint_el_disambiguation_only
+
+## Contribution Guidelines
+To contribute, follow these steps:
+
+1.	Fork the repository.
+2.	Clone your fork:
+    git clone https://github.com/<your-username>/BELA.git
+3.  Create a new branch:
+    git checkout -b new-feature-branch
+4.	Make your changes and ensure all tests pass:
+    PYTHONPATH=.:$PYTHONPATH python -m unittest
+5.	Submit a pull request to the original repository.
+
 ## License
 BELA is MIT licensed. See the [LICENSE](LICENSE) file for details.
